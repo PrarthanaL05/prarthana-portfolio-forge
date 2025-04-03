@@ -42,7 +42,7 @@ const Achievements = () => {
 
   // Languages section
   const languages = [
-    { name: "English", proficiency: 85 },
+    { name: "English", proficiency: 90 },
     { name: "Hindi", proficiency: 100 },
     { name: "Kannada", proficiency: 100 },
     { name: "Telugu", proficiency: 90 }
