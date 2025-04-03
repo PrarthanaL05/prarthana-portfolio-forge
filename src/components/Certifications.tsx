@@ -8,6 +8,7 @@ interface Certification {
   date: string;
   description?: string;
   url?: string;
+  bgColor: string;
 }
 
 const Certifications = () => {
@@ -17,7 +18,8 @@ const Certifications = () => {
       issuer: "Teachnook, Wissenaire IIT Bhubaneshwar",
       date: "2024",
       description: "Comprehensive certification in Artificial Intelligence and Machine Learning fundamentals and applications.",
-      url: "#"
+      url: "#",
+      bgColor: "bg-portfolio-softPink"
     },
     // Placeholder for future certifications
     {
@@ -25,36 +27,42 @@ const Certifications = () => {
       issuer: "Coursera/Udemy/Other Platform",
       date: "Coming Soon",
       description: "Placeholder for future certifications and courses.",
+      bgColor: "bg-portfolio-softYellow"
     }
   ];
 
   return (
-    <section id="certifications" className="section-padding bg-gray-50 dark:bg-gray-800">
-      <div className="container mx-auto">
-        <h2 className="section-title">Certifications & Courses</h2>
+    <section id="certifications" className="section-padding bg-gradient-to-br from-portfolio-softBlue to-white relative overflow-hidden">
+      {/* Background pattern */}
+      <div className="absolute inset-0 bg-pattern-dots bg-dots-sm opacity-10 z-0"></div>
+      
+      <div className="container mx-auto relative z-10">
+        <h2 className="section-title text-gray-900">Certifications & Courses</h2>
         
         <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {certifications.map((cert, index) => (
             <div 
               key={index}
-              className="bg-white dark:bg-gray-900 rounded-xl shadow-lg p-6 transition-transform duration-300 hover:-translate-y-2 h-full flex flex-col"
+              className={`${cert.bgColor} bg-opacity-30 rounded-xl shadow-lg p-6 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl h-full flex flex-col`}
             >
               <div className="flex items-center mb-4">
-                <Award className="text-portfolio-purple mr-3" size={24} />
-                <h3 className="text-xl font-semibold text-gray-800 dark:text-white">{cert.title}</h3>
+                <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center text-portfolio-purple mr-3 shadow-md">
+                  <Award size={24} />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-800 font-heading">{cert.title}</h3>
               </div>
               
-              <div className="mb-3 flex items-center text-sm text-gray-500 dark:text-gray-400">
+              <div className="mb-3 flex items-center text-sm text-gray-600">
                 <Calendar size={16} className="mr-2" />
                 <span>{cert.date}</span>
               </div>
               
-              <p className="text-gray-600 dark:text-gray-300 text-sm mb-3">
+              <p className="text-gray-700 text-sm mb-3">
                 <span className="font-medium">Issuer:</span> {cert.issuer}
               </p>
               
               {cert.description && (
-                <p className="text-gray-600 dark:text-gray-300 text-sm mb-6 flex-grow">
+                <p className="text-gray-700 text-sm mb-6 flex-grow">
                   {cert.description}
                 </p>
               )}

@@ -69,7 +69,13 @@ export default {
 					lightBlue: '#60A5FA',
 					highlight: '#9333EA',
 					lightGray: '#F3F4F6',
-					darkGray: '#374151'
+					darkGray: '#374151',
+					softPink: '#FFC0CB',
+					softYellow: '#FEF9C3',
+					softGreen: '#DCFCE7',
+					softBlue: '#DBEAFE',
+					softPurple: '#F3E8FF',
+					softOrange: '#FFEDD5'
 				}
 			},
 			borderRadius: {
@@ -101,6 +107,14 @@ export default {
 				'bounce-slow': {
 					'0%, 100%': { transform: 'translateY(0)' },
 					'50%': { transform: 'translateY(-15px)' }
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-10px)' }
+				},
+				'rotate-slow': {
+					'0%': { transform: 'rotate(0deg)' },
+					'100%': { transform: 'rotate(360deg)' }
 				}
 			},
 			animation: {
@@ -109,11 +123,27 @@ export default {
 				'fade-in': 'fade-in 0.7s ease-out',
 				'slide-in': 'slide-in 0.7s ease-out',
 				'pulse-slow': 'pulse-slow 3s infinite',
-				'bounce-slow': 'bounce-slow 3s infinite'
+				'bounce-slow': 'bounce-slow 3s infinite',
+				'float': 'float 6s ease-in-out infinite',
+				'rotate-slow': 'rotate-slow 15s linear infinite'
 			},
 			fontFamily: {
-				sans: ['Inter', 'sans-serif'],
-				heading: ['Poppins', 'sans-serif']
+				sans: ['Poppins', 'sans-serif'],
+				heading: ['Playfair Display', 'serif']
+			},
+			backgroundImage: {
+				'gradient-soft': 'linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%)',
+				'gradient-yellow': 'linear-gradient(120deg, #f6d365 0%, #fda085 100%)',
+				'gradient-pink': 'linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)',
+				'gradient-blue': 'linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%)',
+				'gradient-green': 'linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%)',
+				'gradient-purple': 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+				'pattern-dots': 'radial-gradient(#8B5CF6 1px, transparent 1px)',
+				'pattern-grid': 'linear-gradient(to right, #f0f0f0 1px, transparent 1px), linear-gradient(to bottom, #f0f0f0 1px, transparent 1px)'
+			},
+			backgroundSize: {
+				'dots-sm': '20px 20px',
+				'dots-md': '30px 30px'
 			}
 		}
 	},

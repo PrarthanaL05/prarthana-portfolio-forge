@@ -27,40 +27,45 @@ const Hero = () => {
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Background gradient and pattern */}
-      <div className="absolute inset-0 bg-gradient-to-br from-white to-purple-50 dark:from-gray-900 dark:to-gray-800 z-0"></div>
-      <div className="absolute inset-0 opacity-30 dark:opacity-10 bg-grid-pattern z-0"></div>
-
+      {/* Background with lighter colors and pattern */}
+      <div className="absolute inset-0 bg-gradient-to-br from-portfolio-softBlue to-portfolio-softPurple z-0"></div>
+      <div className="absolute inset-0 bg-pattern-dots bg-dots-md opacity-10 z-0"></div>
+      
+      {/* Floating shapes */}
+      <div className="absolute top-20 left-20 w-32 h-32 bg-portfolio-softYellow rounded-full opacity-40 animate-float z-0"></div>
+      <div className="absolute bottom-40 right-20 w-24 h-24 bg-portfolio-softPink rounded-full opacity-30 animate-float animation-delay-2000 z-0"></div>
+      <div className="absolute top-40 right-40 w-16 h-16 bg-portfolio-softGreen rounded-full opacity-30 animate-float animation-delay-1000 z-0"></div>
+      
       <div className="container mx-auto px-4 pt-20 z-10 text-center">
         <div className="max-w-4xl mx-auto">
           <div className="space-y-6 animate-on-scroll opacity-0" ref={textRef}>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 font-heading leading-tight">
               Hi, I'm <span className="text-portfolio-purple">Prarthana L</span>
             </h1>
             
-            <h2 className="text-xl md:text-2xl lg:text-3xl text-gray-700 dark:text-gray-300 font-light mt-4">
+            <h2 className="text-xl md:text-2xl lg:text-3xl text-gray-700 font-light mt-4">
               Innovating with Code | Engineering Tomorrow's Solutions
             </h2>
             
             <div className="flex flex-wrap justify-center gap-4 mt-8">
-              <div className="flex items-center bg-white dark:bg-gray-800 px-4 py-2 rounded-full shadow-md">
+              <div className="flex items-center bg-white px-4 py-2 rounded-full shadow-md transition-transform hover:scale-105 duration-300">
                 <Code className="text-portfolio-purple mr-2" size={20} />
-                <span className="text-gray-700 dark:text-gray-300">Software Development</span>
+                <span className="text-gray-700">Software Development</span>
               </div>
-              <div className="flex items-center bg-white dark:bg-gray-800 px-4 py-2 rounded-full shadow-md">
+              <div className="flex items-center bg-white px-4 py-2 rounded-full shadow-md transition-transform hover:scale-105 duration-300">
                 <Brain className="text-portfolio-purple mr-2" size={20} />
-                <span className="text-gray-700 dark:text-gray-300">Artificial Intelligence</span>
+                <span className="text-gray-700">Artificial Intelligence</span>
               </div>
-              <div className="flex items-center bg-white dark:bg-gray-800 px-4 py-2 rounded-full shadow-md">
+              <div className="flex items-center bg-white px-4 py-2 rounded-full shadow-md transition-transform hover:scale-105 duration-300">
                 <Zap className="text-portfolio-purple mr-2" size={20} />
-                <span className="text-gray-700 dark:text-gray-300">Problem Solving</span>
+                <span className="text-gray-700">Problem Solving</span>
               </div>
             </div>
             
             <div className="pt-10">
               <a 
                 href="#about"
-                className="btn-primary animate-pulse-slow inline-block"
+                className="inline-flex items-center justify-center rounded-full bg-portfolio-purple px-6 py-3 text-sm font-medium text-white shadow-lg transition-all hover:bg-portfolio-purple/90 hover:shadow-xl hover:-translate-y-1"
               >
                 Know More
                 <ArrowDown className="ml-2" size={16} />
