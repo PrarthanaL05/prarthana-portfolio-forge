@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from 'react';
 import { ArrowDown, Code, Brain, Zap, Star } from 'lucide-react';
 
@@ -44,7 +43,7 @@ const Hero = () => {
       
       <div className="container mx-auto px-4 pt-20 z-10 text-center">
         <div className="max-w-4xl mx-auto">
-          <div className="space-y-6 animate-on-scroll opacity-0" ref={textRef}>
+          <div className="space-y-6" ref={textRef}>
             <div className="relative">
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 font-heading leading-tight">
                 Hi, I'm <span className="bg-gradient-to-r from-portfolio-purple to-portfolio-lightBlue bg-clip-text text-transparent">Prarthana L</span>
