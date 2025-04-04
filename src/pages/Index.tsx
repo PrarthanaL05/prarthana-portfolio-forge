@@ -9,6 +9,7 @@ import Certifications from '../components/Certifications';
 import Achievements from '../components/Achievements';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
+import ChatbotBubble from '../components/ChatbotBubble';
 
 const Index = () => {
   useEffect(() => {
@@ -26,6 +27,7 @@ const Index = () => {
       <Achievements />
       <Contact />
       <Footer />
+      <ChatbotBubble />
     </div>
   );
 };
